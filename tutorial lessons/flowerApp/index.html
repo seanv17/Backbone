@@ -11,7 +11,8 @@
   <!-- ========= -->
 
   <div id="allFlowers">All flowers here</div>
-  <div id="EuropeanFlowers">European flowers her</div>
+  ----------------------------------------
+  <div id="europeanFlowers">European flowers here</div>
 
   <div id="copy"></div>
 
@@ -21,6 +22,14 @@
     <li class="flowerInfo"><strong>Name: </strong><%= name %></li>
     <li class="flowerInfo"><strong>Price: $</strong><%= price %></li>
     <li class="flowerInfo"><strong>Color: </strong><%= color %></li>
+    </ul>
+  </script>
+
+  <script id="europeanFlowerElement" type="text/template">
+    <a href="#<%= link %>"><img src="<%= image %>" alt="<%= name %>" class="image" /></a>
+    <ul>
+    <li class="europeanFlowerStyle"><strong>Name: </strong><%= name %></li>
+    <li class="europeanFlowerStyle"><strong>Color: </strong><%= color %></li>
     </ul>
   </script>
 

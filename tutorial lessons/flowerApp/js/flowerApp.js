@@ -37,13 +37,21 @@ var flowerGroup = new app.flowerGroup([
   redRoses, blueRoses, purpleRoses, fleurDeLis
 ]);
 
-var EuropeanFlowers = new app.EuropeanFlowers([
+var europeanFlowers = new app.europeanFlowers([
   tantilizingTulips, fleurDeLis, redRoses
 ]);
 
 var flowerGroupView = new app.allFlowersView({ collection: flowerGroup});
 
 $('#allFlowers').html(flowerGroupView.render().el);
+
+var flowerRouter = new app.Router();
+
+Backbone.history.start();
+
+// var europeanFlowersGroupView = new app.allFlowersView({ collection: europeanFlowers});
+//
+// $('#allFlowers').html(europeanFlowersGroupView.render().el);
 
 // EuropeanFlower.set([tantilizingTulips, fleurDeLis, purpleRoses]);
 // flowerGroup.set([blueRoses, fleurDeLis]);
