@@ -9,7 +9,7 @@ var blueRoses = new app.singleFlower({
   name: 'Blue Roses',
   price: 39.99,
   color: 'blue',
-  link: 'rainbowRose'
+  link: 'blueRose'
 });
 
 var purpleRoses = new app.singleFlower({
@@ -19,8 +19,45 @@ var purpleRoses = new app.singleFlower({
   link: 'purpleRose'
 });
 
-console.log(redRoses.toJSON());
-console.log(purpleRoses.toJSON());
+var tantilizingTulips = new app.singleFlower({
+  name: 'Tantilizing Tulips',
+  price: 29.99,
+  color: 'orange',
+  link: 'orange'
+});
 
-blueRoses.set('color', 'dragon');
-console.log(blueRoses.toJSON());
+var fleurDeLis = new app.singleFlower({
+  name: 'Fleur-de-lis',
+  price: 39.99,
+  color: 'burgandy',
+  link: 'burgandy'
+});
+
+var flowerGroup = new app.flowerGroup([
+  redRoses, blueRoses, purpleRoses, fleurDeLis
+]);
+
+var EuropeanFlowers = new app.EuropeanFlowers([
+  tantilizingTulips, fleurDeLis, redRoses
+]);
+
+var flowerGroupView = new app.allFlowersView({ collection: flowerGroup});
+
+$('#allFlowers').html(flowerGroupView.render().el);
+
+// EuropeanFlower.set([tantilizingTulips, fleurDeLis, purpleRoses]);
+// flowerGroup.set([blueRoses, fleurDeLis]);
+// tantilizingTulips.set('originCountry', 'Holland');
+//
+// console.log(EuropeanFlower.toJSON());
+// console.log(flowerGroup.toJSON());
+
+// console.log(flowerGroup.toJSON());
+// flowerGroup.remove(purpleRoses);
+// console.log(flowerGroup.toJSON());
+
+// console.log(redRoses.toJSON());
+// console.log(purpleRoses.toJSON());
+//
+// blueRoses.set('color', 'dragon');
+// console.log(blueRoses.toJSON());

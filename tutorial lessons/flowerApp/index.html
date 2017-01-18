@@ -10,7 +10,19 @@
   <!-- Your HTML -->
   <!-- ========= -->
 
-  <div id="container">Loading...</div>
+  <div id="allFlowers">All flowers here</div>
+  <div id="EuropeanFlowers">European flowers her</div>
+
+  <div id="copy"></div>
+
+  <script id="flowerElement" type="text/template">
+    <a href="#<%= link %>"><img src="<%= image %>" alt="<%= name %>" class="image" /></a>
+    <ul>
+    <li class="flowerInfo"><strong>Name: </strong><%= name %></li>
+    <li class="flowerInfo"><strong>Price: $</strong><%= price %></li>
+    <li class="flowerInfo"><strong>Color: </strong><%= color %></li>
+    </ul>
+  </script>
 
   <!-- ========= -->
   <!-- Libraries -->
@@ -24,9 +36,6 @@
   <script src="js/collections/allFlowers.js"></script>
   <script src="js/routes/router.js"></script>
   <script src="js/flowerApp.js"></script>
-
-
-  </script>
 
 
   <!-- =============== -->
